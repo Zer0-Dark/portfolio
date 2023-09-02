@@ -1,69 +1,133 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+/* the navbar  */
+.nav-bar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  border-bottom: solid 2px black;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.nav-bar-logo h3 {
+  font-size: 35px;
+  letter-spacing: 25px;
+  text-shadow: 2px 2px 1px #bbbbbb;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.nav-bar-items {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
 }
-button:hover {
-  border-color: #646cff;
+.nav-bar-items a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.nav-bar-items a:hover {
+  color: #40e0d0;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+/* The navbar end */
+
+
+/* The home component */
+.home-background {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 106px);
+}
+.home-background {
+  background-image: url("./photos/mountain.jpg");
+  background-color: #cccccc;
+  background-size: cover;
+  overflow: hidden;
+}
+.home-background h1 {
+  position: absolute;
+  width: 300px;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 10px;
+  text-align: center;
+  animation: dvd 12s infinite;
+  animation-timing-function: linear;
+  padding: 0;
+  margin: 0;
+}
+.home-background span {
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+
+@keyframes dvd {
+  0% {
+    top: 50%;
+    right: 15%;
   }
-  a:hover {
-    color: #747bff;
+  25% {
+    top: 60px;
+    right: 50%;
   }
-  button {
-    background-color: #f9f9f9;
+  50% {
+    top: 50%;
+    right: 85%;
+  }
+  75% {
+    top: 90%;
+    right: 50%;
+  }
+  100% {
+    top: 50%;
+    right: 15%;
   }
 }
+
+/* End Home component */
+
+/* Start about me component */
+.about-me{
+  display: flex;
+  height: calc(100vh - 106px);
+}
+.about-me-nav{
+  display: inline-block;
+  width: 30vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 60px;
+  border-right: solid 2px black ;
+}
+.about-me-nav a{
+  margin-bottom: 70px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+
+}
+.about-me-nav a:hover{
+  color: #40e0d0;
+}
+.about-me-main{
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+
+/* End about me component */
