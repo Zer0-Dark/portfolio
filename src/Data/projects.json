@@ -14,5 +14,20 @@
         "madeWith": "html,css,vanilla JS",
         "github": "https://github.com/Zer0-Dark/Interactive-rating-component",
         "live": "https://dancing-taffy-6717b3.netlify.app/"
+    },
+    {
+        "id": 3,
+        "name": "Advice App",
+        "img": "https://i.imgur.com/L2G6BMB.png",
+        "madeWith": "html,css,vanilla JS",
+        "github": "https://github.com/Zer0-Dark/FrontmentorAdviceApp",
+        "live": "https://mellifluous-muffin-c8bf4a.netlify.app/"
+    },
+    {
+        "id": 4,
+        "name": "Calculator",
+        "img": "https://i.imgur.com/x4TfQxn.png",
+        "github": "https://github.com/Zer0-Dark/frontendMentor-Calculator",
+        "live": "https://melodic-taiyaki-a0191a.netlify.app/"
     }
 ]
