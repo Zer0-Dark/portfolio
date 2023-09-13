@@ -11,6 +11,7 @@
         "id": 2,
         "name": "Interactive rating component",
         "img": "https://i.imgur.com/sHun7Y5.png",
+        "madeWith": "html,css,vanilla JS",
         "github": "https://github.com/Zer0-Dark/Interactive-rating-component",
         "live": "https://dancing-taffy-6717b3.netlify.app/"
     }
