@@ -1,6 +1,17 @@
 [
     {
-        "id":1,
-        "name":""
+        "id": 1,
+        "name": "Speed Typing Game",
+        "img": "https://i.imgur.com/xLY7pj1.png",
+        "madeWith": "html,css,vanilla JS",
+        "github": "https://github.com/Zer0-Dark/typingSpeedGame",
+        "live": "https://legendary-truffle-9fac94.netlify.app/"
+    },
+    {
+        "id": 2,
+        "name": "Interactive rating component",
+        "img": "https://i.imgur.com/sHun7Y5.png",
+        "github": "https://github.com/Zer0-Dark/Interactive-rating-component",
+        "live": "https://dancing-taffy-6717b3.netlify.app/"
     }
 ]

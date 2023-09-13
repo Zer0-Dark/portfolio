@@ -162,12 +162,11 @@
   border: 3px solid #40e0d0;
   margin: 7px;
 }
-.projects-cards .card .card-img{
-margin: 15px 10px;
-}
+
 .projects-cards .card:hover .card-img img {
   transform: scale(1.1);
   filter: blur(0px);
+
 }
 .projects .card .card-info {
   padding: 10px;
@@ -184,9 +183,9 @@ margin: 15px 10px;
 .projects-cards .card .card-img img {
   width: 400px;
   height: 225px;
-  border: 5px solid black;
+  /* border: 5px solid black; */
   transition: 0.5s;
-  filter: blur(1.5px);
+  filter: blur(1px);
 }
 .projects .card .source {
   width: 100%;

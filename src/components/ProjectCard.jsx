@@ -5,14 +5,14 @@ export default function ProjectCard(props){
     return(
         <div className="card">
             <div className="card-img">
-            <img src={props.src}></img>
+            <img src={props.img}></img>
             </div>
             <div className="card-info">
-            <h1>{props.title}</h1>
+            <h1>{props.name}</h1>
             <h3>{props.madeWith}</h3>
             <div className="source">
-                <a href={props.github}><img src={Github} alt="github"></img></a>
-                <a href={props.live}><img src={eyes} alt="github"></img></a>
+                <a href={props.github} target="_blank" rel="noreferrer"><img src={Github} alt="github"></img></a>
+                <a href={props.live} target="_blank" rel="noreferrer"><img src={eyes} alt="github" ></img></a>
             </div>
             </div>
         </div>
