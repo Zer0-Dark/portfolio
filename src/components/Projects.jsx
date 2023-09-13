@@ -9,7 +9,7 @@ export default function Projects(){
             </h1>
             <div className="projects-cards">
             <ProjectCard
-                src="https://imgur.com/xLY7pj1"
+                src="https://i.imgur.com/xLY7pj1.png1"
                 title="Speed Typing game"
                 madeWith="JS,HTML,CSS"
             ></ProjectCard>
