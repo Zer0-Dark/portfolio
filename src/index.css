@@ -20,35 +20,7 @@
   letter-spacing: 25px;
   text-shadow: 2px 2px 1px #bbbbbb;
 }
-.nav-bar-items-mobile {
-  display: block;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 100%;
-  right: 50%;
-  z-index: 2;
-  text-align: center;
-  transform: translateX(50%);
-  background-color: rgba(255, 255, 255, 0.509);
-  width: 100%;
-  padding: 20px 0px;
-  border: 3px solid black;
-}
-.nav-bar-items-mobile a {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: #bbbbbb;
-  padding: 20px;
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-}
-.nav-bar-items-mobile a:hover {
-  background-color: black;
-  color: white;
-}
+
 .nav-bar-items {
   display: flex;
   width: 50%;
@@ -82,16 +54,47 @@
   margin: 0px;
 }
 @media (max-width: 900px) {
-  .nav-bar-items {
+  /* .nav-bar-items {
     display: none;
-  }
+  } */
   .nav-bar button {
     display: block;
   }
+  .nav-bar-items {
+    display: none;
+  }
+  .nav-bar-items-active {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    right: 50%;
+    z-index: 2;
+    text-align: center;
+    transform: translateX(50%);
+    background-color: rgba(255, 255, 255, 0.509);
+    width: 100%;
+    padding: 20px 0px;
+    border: 3px solid black;
+  }
+  .nav-bar-items-active a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #bbbbbb;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .nav-bar-items-active a:hover {
+    background-color: black;
+    color: white;
+  }
 }
 @media (min-width: 900px) {
-  .nav-bar-items-mobile {
-    display: none ;
+  .nav-bar-items-active {
+    display: none;
   }
 }
 
@@ -273,7 +276,7 @@
   margin-bottom: 20px;
 }
 
-@media (max-width:500px) {
+@media (max-width: 500px) {
   .projects-cards .card {
     width: 95%;
   }
@@ -281,10 +284,9 @@
     width: 100%;
     height: fit-content;
   }
-  .projects-cards .card .card-img img{
-    width:100%;
+  .projects-cards .card .card-img img {
+    width: 100%;
     height: fit-content;
-
   }
 }
 
@@ -316,6 +318,15 @@
 }
 .contact-me .e-mail {
   margin-top: 50px;
+}
+@media (max-width: 650px) {
+  .contact-me .icons {
+    flex-direction: column;
+  }
+  .contact-me {
+    justify-content: flex-start;
+    margin-top: 30px;
+  }
 }
 
 /* End Contact me  */
