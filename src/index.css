@@ -273,6 +273,21 @@
   margin-bottom: 20px;
 }
 
+@media (max-width:500px) {
+  .projects-cards .card {
+    width: 95%;
+  }
+  .projects-cards .card .card-img {
+    width: 100%;
+    height: fit-content;
+  }
+  .projects-cards .card .card-img img{
+    width:100%;
+    height: fit-content;
+
+  }
+}
+
 /* End projects */
 
 /* Start ContactME */
