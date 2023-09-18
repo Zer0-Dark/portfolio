@@ -21,10 +21,10 @@ function SharedNavBar() {
                     <h3>ZERO</h3>
                 </div>
                 <div className={mobile}>
-                    <NavLink onClick={settingMobile} to={"/"}>Home</NavLink>
-                    <NavLink onClick={settingMobile} to={"about"}>Who Am I ?</NavLink>
-                    <NavLink onClick={settingMobile} to={"projects"}>Projects</NavLink>
-                    <NavLink onClick={settingMobile} to={"contact"}>{"Contact <Me"}</NavLink>
+                    <NavLink to={"/"}>Home</NavLink>
+                    <NavLink to={"about"}>Who Am I ?</NavLink>
+                    <NavLink to={"projects"}>Projects</NavLink>
+                    <NavLink to={"contact"}>{"Contact <Me"}</NavLink>
                 </div>
                 <button className="more-info" onClick={settingMobile}>
                     <img src={info}></img>
