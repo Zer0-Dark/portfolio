@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+:root {
+  --main-hover-color: #ee0000;
+  --main-background-color: #eeeeee;
+  --main-font-color: #cc0000;
+}
 
 /* the navbar  */
 .nav-bar {
@@ -18,7 +23,7 @@
 .nav-bar-logo h3 {
   font-size: 35px;
   letter-spacing: 25px;
-  text-shadow: 2px 2px 1px #bbbbbb;
+  text-shadow: 1px 1px 0.1px var(--main-hover-color);
 }
 
 .nav-bar-items {
@@ -34,7 +39,7 @@
   font-weight: bold;
 }
 .nav-bar-items a:hover {
-  color: #40e0d0;
+  color: var(--main-hover-color);
 }
 .nav-bar button {
   width: fit-content;
@@ -89,7 +94,7 @@
   }
   .nav-bar-items-active a:hover {
     background-color: black;
-    color: white;
+    color: var(--main-hover-color);
   }
 }
 @media (min-width: 900px) {
@@ -157,40 +162,300 @@
 
 /* End Home component */
 
-/* Start about me component */
-.about-me {
-  display: flex;
-  height: calc(100vh - 106px);
-}
-.about-me-nav {
-  display: inline-block;
-  width: 30vh;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px 60px;
-  border-right: solid 2px black;
-}
-.about-me-nav a {
-  margin-bottom: 70px;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-}
-.about-me-nav a:hover {
-  color: #40e0d0;
-}
-.about-me-main {
-  width: 100%;
-  text-align: center;
+/* start about me */
+.about-home {
+  padding: 30px;
   background-color: black;
   color: white;
 }
+.about-home .about-home-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0px 15px;
+  margin-bottom: 40px;
+}
+.about-home .about-home-info .avatar {
+  position: relative;
+}
+.about-home .about-home-info img {
+  position: relative;
+  width: 300px;
+  border-radius: 100%;
+  border: 10px solid white;
+  margin-bottom: 10px;
+  /* animation: avatarWheel 3s infinite;
+  animation-timing-function:ease; */
+}
+.about-home .about-home-info .avatar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  /* top: -10px; */
+  /* left: 10px; */
+  left: -10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--main-hover-color);
+  border-left: 20px solid black;
+  /* z-index: 3; */
+  animation: rotate 3s linear infinite;
+}
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.about-home h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 1px #d80000;
+}
+.about-home .about-home-info p {
+  max-width: 700px;
+  min-width: 300px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.about-home .about-home-info p span {
+  color: red;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+@media (max-width: 500px) {
+  .about-home .about-home-info img {
+    width: 200px;
+  }
+  .about-home .about-home-info h1 {
+    font-size: 30px;
+  }
+  .about-home .about-home-info p {
+    font-size: 18px;
+  }
+  .about-home .about-home-info p span {
+    font-size: 22px;
+  }
+  .about-home .about-home-info .avatar::before {
+    left: -10px;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes avatarWheel {
+  0% {
+    border: 10px solid white;
+    border-left: 10px solid red;
+  }
+  25% {
+    border: 10px solid white;
+
+    border-top: 10px solid red;
+  }
+  50% {
+    border: 10px solid white;
+
+    border-right: 10px solid red;
+  }
+  75% {
+    border: 10px solid white;
+
+    border-bottom: 10px solid red;
+  }
+  100% {
+    border: 10px solid white;
+
+    border-left: 10px solid red;
+  }
+}
+
+/* Start Skills */
+.skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.skills .skills-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.skills .skills-area .skill-container {
+  margin-bottom: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+.skills .skills-area .skill-container h3 {
+  width: 70px;
+  font-size: 20px;
+  color: var(--main-hover-color);
+}
+.skills .skills-area .html {
+  position: relative;
+}
+
+.skills .skills-area .progress {
+  width: 600px;
+  height: 30px;
+  background-color: var(--main-background-color);
+  position: relative;
+}
+.skills .skills-area .html-progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 90%;
+  height: 30px;
+  background-color: var(--main-font-color);
+}
+.skills .skills-area .html-progress::after {
+  content: "90%";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  top: -40px;
+  left: 90%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+  text-align: center;
+  border-bottom: 5px solid var(--main-hover-color);
+}
+.skills .skills-area .css-progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 80%;
+  height: 30px;
+  background-color: var(--main-font-color);
+}
+.skills .skills-area .css-progress::after {
+  content: "80%";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  top: -40px;
+  left: 80%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+  text-align: center;
+  border-bottom: 5px solid var(--main-hover-color);
+}
+.skills .skills-area .react-progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 30px;
+  background-color: var(--main-font-color);
+}
+.skills .skills-area .react-progress::after {
+  content: "50%";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  top: -40px;
+  left: 50%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+  text-align: center;
+  border-bottom: 5px solid var(--main-hover-color);
+}
+.skills .skills-area .js-progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 70%;
+  height: 30px;
+  background-color: var(--main-font-color);
+}
+.skills .skills-area .js-progress::after {
+  content: "70%";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  top: -40px;
+  left: 70%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+  text-align: center;
+  border-bottom: 5px solid var(--main-hover-color);
+}
+.skills .skills-area .leetcode-progress::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  width: 30%;
+  height: 30px;
+  background-color: var(--main-font-color);
+}
+.skills .skills-area .leetcode-progress::after {
+  content: "35";
+  display: inline-block;
+  position: absolute;
+  width: 60px;
+  height: 25px;
+  top: -40px;
+  left: 30%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  background-color: var(--main-background-color);
+  text-align: center;
+  border-bottom: 5px solid var(--main-hover-color);
+}
+
+/* End Skills SEction  */
 /* End about me component */
 
 /* start projects */
@@ -223,7 +488,7 @@
   border-radius: 5px;
 }
 .projects-cards .card:hover {
-  border: 3px solid #40e0d0;
+  border: 3px solid var(--main-hover-color);
   margin: 7px;
 }
 
@@ -313,8 +578,8 @@
   transition: 0.1s;
 }
 .contact-me .icons img:hover {
-  filter: invert(91%) sepia(82%) saturate(5091%) hue-rotate(139deg)
-    brightness(90%) contrast(94%);
+  filter: invert(10%) sepia(81%) saturate(7433%) hue-rotate(14deg)
+    brightness(100%) contrast(123%);
 }
 .contact-me .e-mail {
   margin-top: 50px;
