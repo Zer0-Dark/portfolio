@@ -1,9 +1,15 @@
 /* eslint-disable react/prop-types */
 import Github from "../photos/github.svg"
 import eyes from "../photos/eye-solid.svg"
+import {motion} from "framer-motion"
 export default function ProjectCard(props){
     return(
-        <div className="card">
+        <motion.div className="card"
+        initial={{opacity:0.7,y:10}}
+        animate={{opacity:1,y:0}}
+        transition={{duration:0.5}}
+        whileHover={{scale:1.01,y:-20}}
+        >
             <div className="card-img">
             <img src={props.img}></img>
             </div>
@@ -15,6 +21,6 @@ export default function ProjectCard(props){
                 <a href={props.live} target="_blank" rel="noreferrer"><img src={eyes} alt="github" ></img></a>
             </div>
             </div>
-        </div>
+        </motion.div>
     )
 }

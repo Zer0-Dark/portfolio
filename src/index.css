@@ -6,8 +6,10 @@
 }
 :root {
   --main-hover-color: #ee0000;
-  --main-background-color: #eeeeee;
+  --main-background-color: #f8f8f8;
+  --sec-background-color: #eeeeee;
   --main-font-color: #cc0000;
+  --sec-font-color: #000;
 }
 
 /* the navbar  */
@@ -106,6 +108,12 @@
 /* The navbar end */
 
 /* The home component */
+.title {
+  font-size: 60px;
+  font-family: "Dela Gothic One", cursive;
+  color: var(--main-hover-color);
+  text-shadow: black 1.5px 1.5px;
+}
 .home-background {
   position: relative;
   width: 100%;
@@ -165,8 +173,8 @@
 /* start about me */
 .about-home {
   padding: 30px;
-  background-color: black;
-  color: white;
+  background-color: var(--main-background-color);
+  color: black;
 }
 .about-home .about-home-info {
   display: flex;
@@ -222,11 +230,10 @@
   }
 }
 
-.about-home h1 {
-  font-size: 50px;
+.about-home .title {
   margin-bottom: 20px;
-  text-shadow: 2px 2px 1px #d80000;
 }
+
 .about-home .about-home-info p {
   max-width: 700px;
   min-width: 300px;
@@ -248,7 +255,7 @@
     font-size: 30px;
   }
   .about-home .about-home-info p {
-    font-size: 18px;
+    font-size: 16px;
   }
   .about-home .about-home-info p span {
     font-size: 22px;
@@ -293,169 +300,237 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.skills .title {
+  margin-bottom: 60px;
+}
+@media (max-width: 500px) {
+  .title {
+    font-size: 40px;
+  }
 }
 .skills .skills-area {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 30px;
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-.skills .skills-area .skill-container {
-  margin-bottom: 20px;
-  display: flex;
-  width: 100%;
+  flex-direction: row;
+  width: 90%;
+  flex-wrap: wrap;
+  gap: 50px;
   justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
-.skills .skills-area .skill-container h3 {
-  width: 70px;
+
+.skills .exp-card {
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  box-shadow: var(--main-hover-color) -2px 2px 4px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.skills .exp-card img {
+  height: 100px;
+}
+
+.skills .exp-card h3 {
+  margin-top: 20px;
+  color: var(--main-hover-color);
   font-size: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.skills .skills-area .window {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  border: 2px var(--main-hover-color) solid;
+  background-color: rgba(0, 0, 0, 0.905);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.skills .skills-area .window button {
+  width: 120px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.skills .skills-area .window button:hover {
+  background-color: var(--main-font-color);
+  color: white;
+}
+.skills .skills-area .exp-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  padding: 80px 30px;
+}
+.skills .skills-area .exp-info img {
+  width: 300px;
+}
+.skills .skills-area .exp-info .etc {
+  width: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.exp-info .etc h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
   color: var(--main-hover-color);
 }
-.skills .skills-area .html {
-  position: relative;
-}
-
-.skills .skills-area .progress {
-  width: 600px;
-  height: 30px;
-  background-color: var(--main-background-color);
-  position: relative;
-}
-.skills .skills-area .html-progress::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 90%;
-  height: 30px;
-  background-color: var(--main-font-color);
-}
-.skills .skills-area .html-progress::after {
-  content: "90%";
-  display: inline-block;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  top: -40px;
-  left: 90%;
-  border-radius: 20px;
-  transform: translateX(-50%);
+.exp-info .etc p {
   font-size: 18px;
-  color: black;
-  font-weight: bold;
-  background-color: var(--main-background-color);
-  text-align: center;
-  border-bottom: 5px solid var(--main-hover-color);
 }
-.skills .skills-area .css-progress::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 80%;
-  height: 30px;
-  background-color: var(--main-font-color);
-}
-.skills .skills-area .css-progress::after {
-  content: "80%";
-  display: inline-block;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  top: -40px;
-  left: 80%;
-  border-radius: 20px;
-  transform: translateX(-50%);
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-  background-color: var(--main-background-color);
-  text-align: center;
-  border-bottom: 5px solid var(--main-hover-color);
-}
-.skills .skills-area .react-progress::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 30px;
-  background-color: var(--main-font-color);
-}
-.skills .skills-area .react-progress::after {
-  content: "50%";
-  display: inline-block;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  top: -40px;
-  left: 50%;
-  border-radius: 20px;
-  transform: translateX(-50%);
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-  background-color: var(--main-background-color);
-  text-align: center;
-  border-bottom: 5px solid var(--main-hover-color);
-}
-.skills .skills-area .js-progress::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 70%;
-  height: 30px;
-  background-color: var(--main-font-color);
-}
-.skills .skills-area .js-progress::after {
-  content: "70%";
-  display: inline-block;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  top: -40px;
-  left: 70%;
-  border-radius: 20px;
-  transform: translateX(-50%);
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-  background-color: var(--main-background-color);
-  text-align: center;
-  border-bottom: 5px solid var(--main-hover-color);
-}
-.skills .skills-area .leetcode-progress::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  left: 0;
-  width: 30%;
-  height: 30px;
-  background-color: var(--main-font-color);
-}
-.skills .skills-area .leetcode-progress::after {
-  content: "35";
-  display: inline-block;
-  position: absolute;
-  width: 60px;
-  height: 25px;
-  top: -40px;
-  left: 30%;
-  border-radius: 20px;
-  transform: translateX(-50%);
-  font-size: 18px;
-  color: black;
-  font-weight: bold;
-  background-color: var(--main-background-color);
-  text-align: center;
-  border-bottom: 5px solid var(--main-hover-color);
-}
-
 /* End Skills SEction  */
+
+/* Start CV section */
+
+.cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cv .cv-draw {
+  cursor: pointer;
+}
+.cv .cv-draw svg {
+  width: 300px;
+}
+@media max-width(500px) {
+  .cv .cv-draw svg {
+    width: 50px;
+  }
+}
+
+/* End CV Section */
+
+/* Start hobbies section */
+.about-home .hobbies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hobbies .gaming {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.hobbies .gaming .title {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-home .hobbies .gaming-cards {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.hobbies .gaming-cards .game-card {
+  width: 320px;
+  height: 520px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: var(--main-hover-color) 2px solid;
+  border-bottom: 20px solid var(--main-hover-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+.game-card .game-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+.game-card .card-background-img {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  background-image: url(./photos/futuristic-background-with-colorful-glowing-abstract-neon-lights.jpg);
+  filter: opacity(0.5) blur(2px);
+
+  background-position: center;
+  background-size: cover;
+}
+.hobbies .gaming-cards .game-card img {
+  width: 317.5px;
+  border-bottom: 4px solid var(--main-hover-color);
+}
+.hobbies .gaming-cards .game-card h2 {
+  text-align: center;
+  position: relative;
+  margin-top: 20px;
+  font-size: 35px;
+  text-shadow: var(--main-font-color) 4px 2px, var(--main-font-color) 2px 2px;
+}
+.hobbies .gaming-cards .game-card .rating {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.hobbies .gaming-cards .game-card .rating .star {
+  filter: grayscale(1);
+  z-index: 2;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  border: none;
+}
+.hobbies .gaming-cards .game-card .rating .star-active {
+  z-index: 2;
+  height: 40px;
+  width: 40px;
+  margin-top: 10px;
+  border: none;
+}
+
+.hobbies .gaming-cards .game-card p {
+  margin-top: 20px;
+  font-weight: 100;
+  text-transform: capitalize;
+  font-size: 20px;
+  z-index: 2;
+  width: 80%;
+  height: 60%;
+  text-align: center;
+  overflow: hidden;
+}
+/* End Hobbies Section */
+
 /* End about me component */
 
 /* start projects */
