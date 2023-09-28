@@ -27,6 +27,7 @@
         "id": 4,
         "name": "Calculator",
         "img": "https://i.imgur.com/x4TfQxn.png",
+        "madeWith": "html,css,vanilla JS",
         "github": "https://github.com/Zer0-Dark/frontendMentor-Calculator",
         "live": "https://melodic-taiyaki-a0191a.netlify.app/"
     }
