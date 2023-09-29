@@ -1,4 +1,6 @@
 import SharedNavBar from './components/SharedNav'
+import './index.css'
+
 function App() {
 
 

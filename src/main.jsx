@@ -1,13 +1,11 @@
 
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Projects from './components/Projects.jsx'
 import ContactMe from './components/ContactMe.jsx'
 import Home from './components/Home.jsx'
 import WhoAmI from './components/WhoAmI.jsx'
-
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

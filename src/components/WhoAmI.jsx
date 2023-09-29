@@ -14,10 +14,12 @@ import nire from "../photos/nier.png"
 import { motion } from "framer-motion";
 import ExpCard from "./ExpCard";
 import GameCard from "./GameCard";
+import Footer from "./Footer";
 export default function WhoAmI() {
 
 
     return (
+        <>
         <div className="about-home">
             <div className="about-home-info">
                 <div className="avatar">
@@ -25,8 +27,8 @@ export default function WhoAmI() {
                 </div>
                 <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="title">Abdulrahman Ehab</motion.h1>
                 <p>
-                    hi my name is Abulrahman but you can call me <span>Zero</span> :),
-                    i'm a FrontEnd developer using React with some experience in Ui/UX design,
+                    hi my name is Abulrahman but you can call me <span>Zer0</span> :),
+                    i'm a <span>FrontEnd developer</span> using <span>React</span>with some experience in Ui/UX design,
                     And here's all about my skills
                 </p>
             </div>
@@ -38,10 +40,10 @@ export default function WhoAmI() {
                     <Progress title="JS" progress="70"></Progress>
                     <Progress title="react" progress="60"></Progress>
                     <Progress title="LeetCode" progress="30"></Progress> */}
-                    <ExpCard name="React" img={reactLogo}></ExpCard>
-                    <ExpCard name="HTML" img={htmlLogo}></ExpCard>
-                    <ExpCard name="CSS" img={cssLogo}></ExpCard>
-                    <ExpCard name="JS" img={jsLogo}></ExpCard>
+                    <ExpCard info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis pariatur omnis et quisquam magni, qui ducimus! Quisquam dignissimos quis itaque animi adipisci eius ipsam impedit dolore, voluptatibus amet repellendus?" name="React" img={reactLogo}></ExpCard>
+                    <ExpCard name="HTML" img={htmlLogo} info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis pariatur omnis et quisquam magni, qui ducimus! Quisquam dignissimos quis itaque animi adipisci eius ipsam impedit dolore, voluptatibus amet repellendus?"></ExpCard>
+                    <ExpCard name="CSS" img={cssLogo} info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis pariatur omnis et quisquam magni, qui ducimus! Quisquam dignissimos quis itaque animi adipisci eius ipsam impedit dolore, voluptatibus amet repellendus?"></ExpCard>
+                    <ExpCard name="JS" img={jsLogo} info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur reiciendis pariatur omnis et quisquam magni, qui ducimus! Quisquam dignissimos quis itaque animi adipisci eius ipsam impedit dolore, voluptatibus amet repellendus?"></ExpCard>
 
 
                 </div>
@@ -49,15 +51,19 @@ export default function WhoAmI() {
             <div className="cv">
                 <motion.h1 initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="title">CV</motion.h1>
 
-                <motion.svg initial={{ opacity: 0 }} animate={{ opacity: 1 }} whileHover={{ scale: 1.1 }} className="cv-draw" xmlns="http://www.w3.org/2000/svg" width="420" height="520">
-                    <motion.path initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_1" d="m13.52485,19.76501l394,0l0,464l-394,0l0,-464z" opacity="undefined" stroke="#000" fill="#fff" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_3" y2="108.36951" x2="356.99086" y1="108.36951" x1="219.99086" stroke="#000" fill="none" />
-                    <motion.rect initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_2" height="133" width="123" y="51.36951" x="41.99087" stroke="#000" fill="#fff" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_4" y2="240.36951" x2="348.99086" y1="241.36951" x1="56.99087" stroke="#000" fill="none" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_11" y2="275.72664" x2="349.70514" y1="276.72664" x1="57.70515" stroke="#000" fill="none" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_12" y2="316.08377" x2="350.41943" y1="317.08377" x1="58.41944" stroke="#000" fill="none" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_13" y2="357.51233" x2="350.06229" y1="358.51233" x1="58.0623" stroke="#000" fill="none" />
-                    <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} id="svg_14" y2="407.86946" x2="352.56229" y1="408.86946" x1="60.5623" stroke="#000" fill="none" />
+                <motion.svg initial={{ opacity: 0 }} animate={{ opacity: 1 }} whileHover={{ scale: 1.1 }} className="cv-draw" xmlns="http://www.w3.org/2000/svg" width="249" height="354">
+                    <g>
+                        <title>Layer 1</title>
+                        <motion.path initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="#fff" opacity="undefined" d="m2.52485,3.76501l242.99999,0l0,347.00002l-242.99999,0l0,-347.00002z" id="svg_1" />
+                        <motion.rect initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="#fff" x="20.0813" y="27.40027" width="75.8604" height="99.46337" id="svg_2" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="129.86302" y1="70.02743" x2="214.35794" y2="70.02743" id="svg_3" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="29.33257" y1="169.4908" x2="209.42393" y2="168.74295" id="svg_4" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="29.7731" y1="195.93245" x2="209.86446" y2="195.1846" id="svg_11" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="30.21364" y1="226.11332" x2="210.305" y2="225.36547" id="svg_12" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="29.99338" y1="257.09545" x2="210.08473" y2="256.34761" id="svg_13" />
+                        <motion.line initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 2, delay: 1 }} stroke="#000" fill="none" x1="31.53526" y1="294.75477" x2="211.62661" y2="294.00693" id="svg_14" />
+                    </g>
+
                 </motion.svg>
             </div>
 
@@ -87,6 +93,8 @@ export default function WhoAmI() {
 
             </div>
         </div>
+        <Footer></Footer>
+        </>
     )
 
 }

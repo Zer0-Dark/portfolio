@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { motion } from "framer-motion"
-export function Progress(props) {
+export default function Progress(props) {
 
 
     return (

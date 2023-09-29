@@ -17,14 +17,16 @@ function SharedNavBar() {
     return (
         <>
             <div className="nav-bar">
+ 
                 <div className="nav-bar-logo">
-                    <h3>ZERO</h3>
+                    <h3>ZER0</h3>
+
                 </div>
                 <div className={mobile}>
                     <NavLink to={"/"}>Home</NavLink>
-                    <NavLink to={"about"}>Who Am I ?</NavLink>
+                    <NavLink to={"about"}>About</NavLink>
                     <NavLink to={"projects"}>Projects</NavLink>
-                    <NavLink to={"contact"}>{"Contact <Me"}</NavLink>
+                    <NavLink to={"contact"}>{"Contact<Me"}</NavLink>
                 </div>
                 <button className="more-info" onClick={settingMobile}>
                     <img src={info}></img>
