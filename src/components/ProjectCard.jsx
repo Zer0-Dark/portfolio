@@ -12,7 +12,7 @@ export default function ProjectCard(props) {
             whileHover={{ scale: 1.01, y: -20 }}
         >
             <div className="card-img">
-                <img src={testPhoto}></img>
+                <img src={props.img}></img>
             </div>
             <motion.div
                 initial={{ opacity: 0 }}
